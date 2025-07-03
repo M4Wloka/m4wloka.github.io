@@ -15,6 +15,7 @@ const mouse = {
 var words = document.getElementsByClassName('word');
 var wordArray = [];
 var currentWord = 0;
+var words = document.getElementsByClassName('word');
 
 
 words[currentWord].style.opacity = 1;
@@ -106,18 +107,23 @@ function animateLetterIn(nw, i) {
 
 function splitLetters(word) {
   var content = word.innerHTML;
-  word.innerHTML = '';
+  word.innerHTML = ''; // Clear original content
   var letters = [];
+
   for (var i = 0; i < content.length; i++) {
     var letter = document.createElement('span');
     letter.className = 'letter';
-    letter.innerHTML = content.charAt(i);
+    
+    // Use &nbsp; to preserve spacing
+    letter.innerHTML = content.charAt(i) === ' ' ? '&nbsp;' : content.charAt(i);
+
     word.appendChild(letter);
     letters.push(letter);
   }
-  
+
   wordArray.push(letters);
 }
+
 
 function init() {
   particles = [];
