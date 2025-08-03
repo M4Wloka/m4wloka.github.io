@@ -15,7 +15,6 @@
 }
 
 body {
-  overflow: hidden;
   background: #212121;
   font-family: "Fira Code", monospace;
 }
@@ -27,6 +26,7 @@ canvas {
   width: 100%;
   height: 100%;
   z-index: 1;
+  pointer-events: none;
 }
 
 .hero{
@@ -37,17 +37,22 @@ canvas {
   justify-content: center;
   flex-wrap: wrap;
   height: 90vh;
-  width: 100%;
+  width: 95%;
   color: var(--white);
 }
 
+
+
+
+
 .navbar{
-  position: relative;
+  position: fixed;
   bottom: 100px;
   width: 100%;
   display: flex; 
   justify-content: center;
   align-items: center; 
+  z-index: 100;
 }
 .nav ul {
   list-style: none;
@@ -65,8 +70,6 @@ canvas {
   max-width: 400px;
   padding-bottom: 20px;
   border-radius: 5px 5px 25px 25px;
-  /* top: 38%; */
-  /* margin: 90vh auto 0; */
 }
 
 .nav [type="checkbox"] {
@@ -188,7 +191,7 @@ canvas {
   justify-content: center;
   flex-wrap: wrap;
   height: 100vh;
-  width: 100%;
+  width: 95%;
   color: var(--white);
 }
 
@@ -214,26 +217,28 @@ canvas {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: base-start;
+  align-items: center; 
   height: 50px;
-  transform: translateX(-50%);
-  left: 30%;
 }
-
-.text h1 {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0;
-  font-size: 1.8rem;
-  
-}
-
-
 
 .word {
   position: absolute;
-  width: 100%;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: max-content;
   opacity: 0;
+  text-align: center;
+  white-space: normal;
+  line-height: 1.2;
+  max-width: 450px; 
+}
+.text h1 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .letter {
@@ -313,4 +318,148 @@ canvas {
 
 .btn:hover::before {
  transform: translateX(0);
+}
+@media (max-width: 600px) {
+
+  .hero-section {
+    width: 95%;
+    height: 100vh;
+    padding: 0%;
+  }
+
+  .hero {
+    width: 95%;
+    height: 100vh;
+    padding: 0 2%;
+  }
+
+  .text-hello {
+    font-size: 1.5rem;
+  }
+
+  .hero-section h1,
+  .text h1 {
+    font-size: 1.5rem;
+  }
+
+  .text {
+    height: 80px;
+    width: 100%;
+  }
+
+  .word {
+    max-width: 95vw;
+    font-size: 1.4rem;
+    line-height: 1.2;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 2rem;
+  }
+
+}
+
+
+.about {
+      position: absolute;
+      display:flex;   
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      min-height: 100vh;
+      width: 95%;
+      z-index: 2;
+    }
+
+.about-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 95%;
+      height: 100%;
+      padding: 5%;
+      color: var(--white);
+    }
+.about-container h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1%;
+  text-align: center;
+}
+.about-container p{
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 2%;
+}
+
+.list-of-skills {
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+.tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+
+.tag {
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: inline-block;
+ 
+}
+
+.tag::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px; 
+  width: 100%;
+  height: 2px;
+  background: transparent;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+  pointer-events: none;
+}
+
+.size-1 { font-size: 1rem; }
+.size-2 { font-size: 1.2rem; }
+.size-3 { font-size: 1.5rem; }
+.size-4 { font-size: 1.8rem; }
+.size-5 { font-size: 2.2rem; }
+
+.size-1.tag:hover { color: #c0392b; text-shadow: 0 0 8px #c0392b, 0 0 16px #c0392b; }
+.size-2.tag:hover { color: #5f497f; text-shadow: 0 0 8px #5f497f, 0 0 16px #5f497f; }
+.size-3.tag:hover { color: #2f4858; text-shadow: 0 0 8px #2f4858, 0 0 16px #2f4858; }
+.size-4.tag:hover { color: #edf0f1; text-shadow: 0 0 8px #edf0f1, 0 0 16px #edf0f1; }
+.size-5.tag:hover { color: #16a085; text-shadow: 0 0 8px #16a085, 0 0 16px #16a085; }
+
+.size-1.tag:hover::after { box-shadow: 0 0 8px #c0392b, 0 0 16px #c0392b; background: #c0392b; }
+.size-2.tag:hover::after { box-shadow: 0 0 8px #5f497f, 0 0 16px #5f497f; background: #5f497f; }
+.size-3.tag:hover::after { box-shadow: 0 0 8px #2f4858, 0 0 16px #2f4858; background: #2f4858; }
+.size-4.tag:hover::after { box-shadow: 0 0 8px #edf0f1, 0 0 16px #edf0f1; background: #edf0f1; }
+.size-5.tag:hover::after { box-shadow: 0 0 8px #16a085, 0 0 16px #16a085; background: #16a085; }
+
+.tag:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
