@@ -157,6 +157,46 @@ window.addEventListener("mouseout", () => {
   mouse.y = undefined;
 });
 
+document.querySelectorAll('.css-typing .line').forEach((line, index) => {
+  line.addEventListener('animationend', () => {
+    line.classList.add('animated');
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const typingSection = document.querySelector('.css-typing');
+  const lines = document.querySelectorAll('.css-typing .line');
+  
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        startTypingAnimation();
+        observer.unobserve(entry.target); 
+      }
+    });
+  }, { threshold: 0.5 }); 
+
+  if (typingSection) {
+    observer.observe(typingSection);
+  }
+
+  function startTypingAnimation() {
+    lines.forEach((line, index) => {
+      const delay = index * 3000; 
+      
+      setTimeout(() => {
+        line.classList.add('animate');
+        
+        line.addEventListener('animationend', () => {
+          line.classList.remove('animate');
+          line.classList.add('animated');
+        });
+      }, delay);
+    });
+  }
+});
+
 init();
 animate();
 changeWord();
