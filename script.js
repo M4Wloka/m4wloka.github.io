@@ -76,7 +76,30 @@ class Particle {
     }
   }
 }
-
+document.addEventListener('DOMContentLoaded', function() {
+  const element = document.querySelector('.typed-text');
+  const text = element.textContent;
+  element.textContent = '';
+  
+  let i = 0;
+  const speed = 80; // typing speed in ms
+  
+  function typeWriter() {
+    if (i < text.length) {
+      element.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+      
+      // Scroll to keep cursor in view
+      element.scrollTop = element.scrollHeight;
+    } else {
+      // Remove cursor when done
+      element.style.setProperty('--show-cursor', '0');
+    }
+  }
+  
+  typeWriter();
+});
 function changeWord() {
   var cw = wordArray[currentWord];
   var nw = currentWord == words.length-1 ? wordArray[0] : wordArray[currentWord+1];
@@ -96,13 +119,13 @@ function changeWord() {
 function animateLetterOut(cw, i) {
   setTimeout(function() {
 		cw[i].className = 'letter out';
-  }, i*80);
+  }, i*40);
 }
 
 function animateLetterIn(nw, i) {
   setTimeout(function() {
 		nw[i].className = 'letter in';
-  }, 340+(i*80));
+  }, 280 +(i*40));
 }
 
 function splitLetters(word) {
@@ -155,46 +178,6 @@ window.addEventListener("resize", () => {
 window.addEventListener("mouseout", () => {
   mouse.x = undefined;
   mouse.y = undefined;
-});
-
-document.querySelectorAll('.css-typing .line').forEach((line, index) => {
-  line.addEventListener('animationend', () => {
-    line.classList.add('animated');
-  });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  const typingSection = document.querySelector('.css-typing');
-  const lines = document.querySelectorAll('.css-typing .line');
-  
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        startTypingAnimation();
-        observer.unobserve(entry.target); 
-      }
-    });
-  }, { threshold: 0.5 }); 
-
-  if (typingSection) {
-    observer.observe(typingSection);
-  }
-
-  function startTypingAnimation() {
-    lines.forEach((line, index) => {
-      const delay = index * 3000; 
-      
-      setTimeout(() => {
-        line.classList.add('animate');
-        
-        line.addEventListener('animationend', () => {
-          line.classList.remove('animate');
-          line.classList.add('animated');
-        });
-      }, delay);
-    });
-  }
 });
 
 init();
