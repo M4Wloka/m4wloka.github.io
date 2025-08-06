@@ -842,3 +842,224 @@ canvas {
 .portfolio-group:hover .portfolio-overlay-blur {
   opacity: 0;
 }
+
+.contact-form {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2em;
+  color: var(--white);
+}
+.form {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form:after,
+.form:before {
+  box-sizing: inherit;
+}
+
+.form-text {
+  font-size: 1em;
+  line-height: 1.2;
+  box-sizing: border-box;
+}
+
+.form-content {
+  display: table-cell;
+  vertical-align: middle;
+  color: var(--light-grey);
+}
+
+.form-content h1 {
+  text-align: center;
+}
+
+.form-text {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%;
+  vertical-align: top;
+}
+
+.form-text-field,
+.textarea-field {
+  position: relative;
+  display: block;
+  float: right;
+  padding: 0.8em;
+  width: 100%;
+  border: none;
+  font-weight: 400;
+  -webkit-appearance: none;
+}
+
+.form-text-field:focus,
+.textarea-field:focus {
+  outline: none;
+}
+
+.form-text-label,
+.textarea-label {
+  display: inline-block;
+  float: right;
+  padding: 0 1em;
+  width: 40%;
+  color: var(--light-grey);
+  font-weight: bold;
+  font-size: 70.25%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.form-text-label-content,
+.textarea-label-content {
+  position: relative;
+  display: block;
+  padding: 1em 0;
+  width: 100%;
+}
+
+.form-text-field-contact {
+  width: 100%;
+  background: transparent;
+  padding: 0.5em 0;
+  margin-bottom: 2em;
+  color: var(--light-grey);
+}
+
+.textarea-field-contact {
+  width: 100%;
+  height: 25vh;
+  background: transparent;
+  padding: 0.5em 0;
+  /* margin-bottom: 2em; */
+  color: var(--light-grey);
+}
+
+.form-text-label-contact,
+.textarea-label-contact {
+  width: 100%;
+  position: absolute;
+  text-align: left;
+  font-size: 1em;
+  pointer-events: none;
+}
+
+.form-text-label-contact {
+  padding: 10px 0 5px;
+}
+
+.textarea-label-contact {
+  padding: 10px 0 5px; /* Changed from 163px to match text field */
+}
+
+.form-text-label-contact::after,
+.textarea-label-contact::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: var(--pomegranate);
+  left: 0;
+  top: 100%;
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition: -webkit-transform 0.3s, background-color 0.3s;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.form-text-label-content-contact,
+.textarea-label-content-contact {
+  padding: 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transition: color 0.3s, -webkit-transform 0.3s;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.form-text--filled .form-text-label-contact::after,
+.form-text-field-contact:focus + .form-text-label-contact::after,
+.textarea-field-contact:focus + .textarea-label-contact::after {
+  background: var(--pomegranate);
+  -webkit-transform: scale3d(1.16, 0.5, 1);
+  transform: scale3d(1.16, 0.5, 1);
+  overflow: hidden;
+}
+
+.form-text--filled .form-text-label-contact .form-text-label-content-contact,
+.form-text-field-contact:focus + .form-text-label-contact .form-text-label-content-contact,
+.textarea-field-contact:focus + .textarea-label-contact .textarea-label-content-contact {
+  color: var(--wisteria);
+  -webkit-transform: translate3d(0, 2.5em, 0) scale3d(0.8, 0.8, 1);
+  transform: translate3d(0, 2.5em, 0) scale3d(0.8, 0.8, 1);
+}
+
+div.send button {
+  color: var(--pomegranate);
+  cursor: pointer;
+  display: block;
+  line-height: 45px;
+  margin: 0 auto 2em;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 100%;
+  background: transparent;
+  border: none;
+  letter-spacing: 5px;
+  font-weight: 600;
+  font-size: 24px;
+  -webkit-transition: all 280ms ease-in-out;
+  transition: all 280ms ease-in-out;
+}
+
+div.send button:after {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 3px solid var(--pomegranate);
+  bottom: 0;
+  content: " ";
+  display: block;
+  position: relative;
+  width: 100%;
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+div.send button:hover {
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+div.send button:focus {
+  outline: none;
+}
+
+div.send button:hover:after {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-color: var(--pomegranate);
+  -webkit-transform: scale3d(1.17, 0.5, 1);
+  transform: scale3d(1.17, 0.5, 1);
+  width: 100%;
+}
