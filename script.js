@@ -167,7 +167,7 @@ const projects = [
   },
   {
     id: '5',
-    title: 'Festival Debbuging',
+    title: 'Festival Debugging',
     category: 'Web Development',
     image: '/public/debbuing-img.jpg',
     video: '/public/debbuging-video.mp4',
@@ -180,12 +180,12 @@ const projects = [
   {
     id: '6',
     title: 'Event Website',
-    category: 'App Development',
-    image: 'https://picsum.photos/seed/project6/600/400',
-    video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
-    description: 'The management app for hostelers, warden, for seamless interaction.',
+    category: 'Web Development',
+    image: '/public/event-website-img.jpg',
+    video: '/public/event-website-video.mp4',
+    description: 'Bootstrap-Event-Website - parallax-style website showcasing an event agency. Featuring an engaging front end crafted with HTML, CSS, JS, and Bootstrap, this site includes compelling testimonials, a sleek carousel, a user-friendly navbar for seamless navigation, and a polished footer. Explore our immersive design that highlights the essence of event planning and management.',
     links: {
-      github: 'https://github.com/NK2552003/Hostel_Management_App',
+      github: 'https://github.com/M4Wloka/Bootstrap-Event-Website',
     },
     progress: 'Completed'
   },
