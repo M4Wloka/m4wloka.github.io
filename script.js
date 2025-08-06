@@ -169,9 +169,9 @@ const projects = [
     id: '5',
     title: 'Festival Debbuging',
     category: 'Web Development',
-    image: 'https://picsum.photos/seed/project5/600/400',
-    video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
-    description: 'The aim of the Festival Website Upgrade project is to enhance the user experience by modernizing the front-end of the existing festival website. This involves upgrading the JavaScript, CSS, and HTML to the latest standards, ensuring responsiveness across all devices, and improving accessibility for all users. Including W3C Standards.',
+    image: '/public/debbuing-img.jpg',
+    video: '/public/debbuging-video.mp4',
+    description: 'The aim of the Festival Website Debbuging project is to enhance the user experience by modernizing the front-end of the existing festival website. This involves upgrading the JavaScript, CSS, and HTML to the latest standards, ensuring responsiveness across all devices, and improving accessibility for all users. Including W3C Standards.',
     links: {
       github: 'https://github.com/M4Wloka/Festival-Website-Upgrade',
     },
@@ -179,7 +179,7 @@ const projects = [
   },
   {
     id: '6',
-    title: 'HostelEase',
+    title: 'Event Website',
     category: 'App Development',
     image: 'https://picsum.photos/seed/project6/600/400',
     video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
@@ -187,7 +187,7 @@ const projects = [
     links: {
       github: 'https://github.com/NK2552003/Hostel_Management_App',
     },
-    progress: 'Working on it'
+    progress: 'Completed'
   },
   // {
   //   id: '7',
