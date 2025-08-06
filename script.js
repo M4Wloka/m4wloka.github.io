@@ -155,13 +155,13 @@ const projects = [
   },
   {
     id: '4',
-    title: 'Background',
-    category: 'Web Development',
-    image: 'https://picsum.photos/seed/project4/600/400',
-    video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
+    title: 'SQLite HANDLER',
+    category: 'App Development',
+    image: '/public/SQLite-img.jpg',
+    video: '/public/SQLite-video.mp4',
     description: 'A randomized background generator for any content creator',
     links: {
-      github: 'https://github.com/NK2552003/Random_Character_Background',
+      github: 'https://github.com/M4Wloka/Introduction-to-Database-QHO429',
     },
     progress: 'Completed'
   },
