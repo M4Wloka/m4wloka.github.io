@@ -143,13 +143,13 @@ const projects = [
   },
   {
     id: '3',
-    title: 'Cursor',
+    title: 'Tallow Lancashire',
     category: 'Web Development',
-    image: 'https://picsum.photos/seed/project3/600/400',
-    video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
-    description: 'The custom modified cursor for better interactivity with users',
+    image: '/public/tallow-img.jpg',
+    video: '/public/tallow-video.mp4',
+    description: 'Tallow Lancashire is a e-commerce website that allows users to showcase products online. The project features are lazy loading, resposive images, preloading, viewport adjustments , CSS animations with resposive design. To project was used HTML5, CSS3 and JavaScript.',
     links: {
-      github: 'https://codepen.io/rlaqxvbr-the-bashful/details/ExqvZey',
+      github: 'https://github.com/M4Wloka/TallowLancashireCo',
     },
     progress: 'Completed'
   },
