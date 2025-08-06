@@ -147,7 +147,7 @@ const projects = [
     category: 'Web Development',
     image: '/public/tallow-img.jpg',
     video: '/public/tallow-video.mp4',
-    description: 'Tallow Lancashire is a e-commerce website that allows users to showcase products online. The project features are lazy loading, resposive images, preloading, viewport adjustments , CSS animations with resposive design. To project was used HTML5, CSS3 and JavaScript.',
+    description: 'Tallow Lancashire is a e-commerce website that allows users to showcase products online. The project features are lazy loading, resposive images, preloading, viewport adjustments , CSS animations with resposive design. To project was done from scratch by UX/UI design in Figma and tools used are HTML5, CSS3 and JavaScript.',
     links: {
       github: 'https://github.com/M4Wloka/TallowLancashireCo',
     },
@@ -159,7 +159,7 @@ const projects = [
     category: 'App Development',
     image: '/public/SQLite-img.jpg',
     video: '/public/SQLite-video.mp4',
-    description: 'A randomized background generator for any content creator',
+    description: 'This assignment involves the development of a Python program utilizing SQLite and database handling, ERD diagrams, and handling database through Python principles. The goal is to create a robust solution adhering to the latest Python and SQLite standards.',
     links: {
       github: 'https://github.com/M4Wloka/Introduction-to-Database-QHO429',
     },
