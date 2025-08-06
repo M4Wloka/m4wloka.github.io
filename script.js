@@ -131,13 +131,13 @@ const projects = [
   },
   {
     id: '2',
-    title: "lil' me",
+    title: "Festival",
     category: 'Web Development',
-    image: 'https://picsum.photos/seed/project2/600/400',
-    video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
-    description: 'An animated moving boy using pure CSS, HTML & JS',
+    image: '/public/festival-img.jpg',
+    video: '/public/festival-video.mp4',
+    description: 'The objective of this project is to create a dynamic festival website that allows users to view festival details, leave the comment, and interact with various features of the festival through a modern web interface. The website use HTML, CSS, JavaScript for the front-end, Node.js and Express for the back-end, SQLite for the database, and AJAX for asynchronous operations.',
     links: {
-      github: 'https://github.com/NK2552003/lil-me-male-version-',
+      github: 'https://github.com/M4Wloka/Web-Technologies-QHO431',
     },
     progress: 'Completed'
   },
