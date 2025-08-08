@@ -167,11 +167,11 @@ const projects = [
   },
   {
     id: '5',
-    title: 'Festival Debugging',
+    title: 'Festival Fix',
     category: 'Web Development',
     image: '/public/debbuing-img.jpg',
     video: '/public/debbuging-video.mp4',
-    description: 'The aim of the Festival Website Debbuging project is to enhance the user experience by modernizing the front-end of the existing festival website. This involves upgrading the JavaScript, CSS, and HTML to the latest standards, ensuring responsiveness across all devices, and improving accessibility for all users. Including W3C Standards.',
+    description: 'The aim of the Festival Website Debbuging project is to enhance the user experience by modernizing the front-end of the existing festival website. This involves upgrading the JavaScript, CSS, and HTML to the latest standards, ensuring responsiveness across all devices, and improving accessibility for all users.',
     links: {
       github: 'https://github.com/M4Wloka/Festival-Website-Upgrade',
     },

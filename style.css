@@ -425,6 +425,7 @@ canvas {
       padding: 20px;
       overflow: hidden;
       width: 40%;
+      margin-left: 25%;
     }
 
 .tag-cloud {
