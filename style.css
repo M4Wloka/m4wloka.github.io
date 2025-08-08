@@ -17,6 +17,7 @@
 body {
   background: #212121;
   font-family: "Fira Code", monospace;
+  text-decoration: none;
 }
 
 canvas {
@@ -949,7 +950,7 @@ canvas {
   height: 25vh;
   background: transparent;
   padding: 0.5em 0;
-  /* margin-bottom: 2em; */
+  margin-bottom: 2em;
   color: var(--light-grey);
 }
 
@@ -1063,3 +1064,93 @@ div.send button:hover:after {
   transform: scale3d(1.17, 0.5, 1);
   width: 100%;
 }
+
+.footer-underline{
+  text-decoration: none;
+}
+
+    footer {
+      text-decoration: none;
+      background: #292828;
+      color: var(--light-grey);
+      padding: 21px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    footer .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    footer .content .logo {
+      font-size: 40px;
+      text-align: center;
+    }
+    footer .content p {
+      text-align: center;
+      width: 100%;
+      max-width: 500px;
+    }
+    footer .content .sm,
+    footer .content .links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+    }
+    footer .content .links {
+      flex-wrap: wrap;
+    }
+    footer .content .sm li {
+      margin: 15px;
+    }
+    footer .content .links li {
+      margin: 0 12px;
+      margin-bottom: 10px;
+    }
+    footer .content .links li a,
+    footer .content .sm li a {
+      color: var(--light-grey);
+      transition: 0.3s ease;
+      text-decoration: none !important;
+    }
+    footer .content .sm li a {
+      font-size: 25px;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      text-decoration: none !important;
+    }
+    footer .content .sm li a:hover {
+      background:transparent;
+      border-radius: 10px;
+      border: 1px solid var(--pomegranate);
+      text-decoration: none !important;
+
+    }
+    footer .content .links li a:hover {
+      opacity: 0.5;
+    }
+    footer .copyright {
+      text-align: center;
+      padding-top: 20px;
+      width: 100%;
+      border-top: 1px solid #555;
+    }
+    @media screen and (max-width: 500px) {
+      footer {
+        width: 100%;
+      }
+      footer .content .logo {
+        font-size: 30px;
+      }
+      footer .content p {
+        padding: 15px;
+      }
+      footer .content .sm li a {
+        padding: 5px;
+      }
+    }

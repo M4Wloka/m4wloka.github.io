@@ -23,6 +23,7 @@ for (var i = 0; i < words.length; i++) {
   splitLetters(words[i]);
 }
 
+document.getElementById("year").innerHTML = new Date().getFullYear();
 
 // Define gradient colors array
 const gradientColors = ["#ff6b6b", "#4ecdc4", "#45b7d1", "#96c93d"];
