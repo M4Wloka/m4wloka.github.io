@@ -183,7 +183,7 @@ const projects = [
     category: 'Web Development',
     image: '/public/event-website-img.jpg',
     video: '/public/event-website-video.mp4',
-    description: 'Bootstrap-Event-Website - parallax-style website showcasing an event agency. Featuring an engaging front end crafted with HTML, CSS, JS, and Bootstrap, this site includes compelling testimonials, a sleek carousel, a user-friendly navbar for seamless navigation, and a polished footer. Explore our immersive design that highlights the essence of event planning and management.',
+    description: 'Bootstrap-Event-Website - parallax-style website showcasing an event agency. Featuring an engaging front end crafted with HTML, CSS, JS, and Bootstrap, this site includes compelling testimonials, a sleek carousel, a user-friendly navbar for seamless navigation, and a polished footer.',
     links: {
       github: 'https://github.com/M4Wloka/Bootstrap-Event-Website',
     },

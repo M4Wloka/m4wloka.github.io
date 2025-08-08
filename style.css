@@ -424,7 +424,7 @@ canvas {
       align-items: center;
       padding: 20px;
       overflow: hidden;
-      width: 40%;
+      width: 50%;
       margin-left: 25%;
     }
 
@@ -781,7 +781,7 @@ canvas {
   } */
    @media (max-width:680px) {
     .portfolio-text-xl {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
     .text{
     height: 30px;
@@ -789,10 +789,13 @@ canvas {
    }
    @media (max-width:515px) {
     .portfolio-text-xl {
-      font-size: 2rem;
+      font-size: 1.6rem;
     }
     .portfolio-group{
       height:280px;
+    }
+    .portfolio-description{
+      font-size: 0.8rem;
     }
    }
    .portfolio-progress{
